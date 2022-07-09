@@ -31,6 +31,9 @@ function Detail() {
                             <p style={{fontSize:'18px'}}>{person.detail}</p>
                         </div>
                     </h4>
+                    <div style={{border:'2px solid orange'}}>
+                        <h4>댓글</h4>
+                    </div>
                     <Post />
                 </div>
             </div>

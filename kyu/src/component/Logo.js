@@ -1,12 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Logo = ({margin,width}) => {
+    const navigate = useNavigate();
     const logoClick = ()=>{
-        //로고 클릭시 홈 화면 가는 로직
+        navigate('/');
     }
     return (
         <>
-            <img src='/Logo.png' alt='이미지가 없습니다' onClick={logoClick} style={{width:width, margin:margin}} />
+            <img onClick={logoClick} src='/Logo.png' alt='이미지가 없습니다' onClick={logoClick} style={{justifyContent:'left', width:'70%'}} />
         </>
     );
 };

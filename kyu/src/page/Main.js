@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../component/Header';
 import { Outlet } from 'react-router-dom';
 import Post from '../component/Post';
+import AddModal from '../modal/AddModal';
 
 function Main() {
     return (
@@ -18,6 +19,7 @@ function Main() {
                     <Outlet/>
                     {/* 게시글 컴포넌트 */}
                     <Post />
+                    <AddModal />
                 </div>
             </div>
         </>

@@ -7,7 +7,9 @@ import Mypage from './page/Mypage';
 import Signup from './page/Signup';
 import Footer from './component/Footer';
 import Serach from './page/Serach';
+import Reple from './page/Reple';
 import './App.css';
+
 function App() {
 
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/serach" element={<Serach />} />
+        <Route path="/reple" element={<Reple />} />
       </Routes>
       <Footer />
     </>
