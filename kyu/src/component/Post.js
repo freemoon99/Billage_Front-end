@@ -1,19 +1,19 @@
 import React from 'react';
 import Block from '../component/Block';
-import { Link } from 'react-router-dom';
 import { getFrontEndInfo } from '../data/FrontEndInfo';
 
 const Post = () => {
-
     let frontEndInfo = getFrontEndInfo();
 
     return (
         <>
-            <div className='container' style={{border:'2px solid blue', textAlign:'center', margin:'auto'}}>
+            <div className='container' style={{width:'100%', border:'2px solid yellow', textAlign:'center'}}>
+                <h4 style={{textAlign:'left'}}>게시물</h4>
                 <div className='row'>
                     {
+                        // id값을 받아와서 이동하기 위함
                         frontEndInfo.map((element)=>(
-                            <Link to={`/detail/${element.id}`} key={element.id}>{<Block frontEndInfo={element} i={element.id}/>}</Link>
+                                <Block frontEndInfo={element} key={element.id} i={element.id}/>
                         ))
                     }
                 </div>

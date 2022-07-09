@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+  background-color: #cdccf7;
+}
+/* 
+footer{
+  background-color: #3F4087;
+} */
