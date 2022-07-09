@@ -7,7 +7,7 @@ import Comment from '../component/Comment';
 function Reply() {
 
   const [comments, setComments] = useState([
-    { id: 1, name: 'Minjoo Park', content: 'I like it!', }
+    { id: 1, name: 'KIT BILLAGE TEAM', content: 'WELCOME!!', }
   ]);
 
   const [like, setLike] = useState(0);  //좋아요 버튼구현
