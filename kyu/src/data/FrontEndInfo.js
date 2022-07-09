@@ -59,3 +59,8 @@ let frontEndInfo = [
   {
     return frontEndInfo;
   }
+
+  export function getFrontEndPeple(id)
+  {
+    return frontEndInfo.find((people)=>{return people.id === id});
+  }

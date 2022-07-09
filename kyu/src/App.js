@@ -8,12 +8,12 @@ import Signup from './page/Signup';
 import Footer from './component/Footer';
 
 function App() {
+
   return (
     <>
       <Routes>
-        <Route path="/" element={<Main />}>
-          <Route path="/detail" element={<Detail />}/>
-        </Route>
+        <Route path="/" element={<Main />} />
+        <Route path="/detail/:productId" element={<Detail />}/>
         <Route path="/Mypage" element={<Mypage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />

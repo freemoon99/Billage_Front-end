@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <>
             <div>
-                <h1>헤더</h1>
+                <h1 style={{borderBottom:'2px solid red'}}>헤더</h1>
             </div>
         </>
     );
