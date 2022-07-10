@@ -6,7 +6,7 @@ const styles = {
         margin: 'auto',
         padding: 10,
         textAlign: 'left',
-        backgroundColor: 'white',
+        backgroundColor: '#cdccf7',
         borderRadius: 16
     },
     imageContainer: {
@@ -45,7 +45,7 @@ class Comment extends Component {
             <div style={styles.root}>
                 <div style={styles.imageContainer}>
                     <img
-                        src='/HOME_image.png'
+                        src='/user.png'
                         style={styles.image}
                     />
                 </div>

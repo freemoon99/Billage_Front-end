@@ -8,7 +8,7 @@ const Logo = ({margin,width}) => {
     }
     return (
         <>
-            <img onClick={logoClick} src='/Logo.png' alt='이미지가 없습니다' onClick={logoClick} style={{justifyContent:'left', width:'70%'}} />
+            <img onClick={logoClick} src='/Logo.png' alt='이미지가 없습니다' style={{width:width, margin:margin,cursor:"pointer"}} />
         </>
     );
 };

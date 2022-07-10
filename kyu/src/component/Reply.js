@@ -34,7 +34,7 @@ function Reply() {
         <h4 style={{texAlign:'left'}}>댓글을 남겨주세요</h4>
         <CommentInput onInsert={onInsert} />
       </Template>
-      <div style={{ marginBottom: "4rem" }}>
+      <div style={{ marginBottom: "4rem", backgroundColor:'#cdccf7'}}>
         {comments.map((comment) => {
           return (
             <Comment

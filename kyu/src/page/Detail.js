@@ -26,8 +26,8 @@ function Detail() {
                         {/* 신상 컴포넌트, props를 person으로 선언하고 불러오기 위함 */}
                         <Myinfo person={person}/>
                         <div style={{border:'2px solid white', borderTop:'0px', borderBottom:'0px'}}>
-                            <p style={{fontSize:'18px'}}>{person.age}</p>
-                            <p style={{fontSize:'18px'}}>{person.department}</p>
+                            <p style={{fontSize:'20px', fontWeight:'bold'}}>{person.name}</p>
+                            <p style={{fontSize:'18px'}}>{person.age}원</p>
                             <p style={{fontSize:'18px'}}>{person.MBTI}</p>
                             <p style={{fontSize:'18px'}}>{person.detail}</p>
                         </div>

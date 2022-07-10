@@ -7,7 +7,7 @@ function Block(props){
         <div className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2' style={{border:'2px solid pink'}}>
             {/* 사진을 클릭하면 페이지 이동을 위함 */}
             <Link to={`/detail/${props.frontEndInfo.id}`}>
-                <img style={{width:'100%', border:'2px solid red'}} src={props.frontEndInfo.photo} alt='사진이 없습니다'/>
+                <img style={{width:'100%', border:'2px solid red', maxHeight:'150px', Width:'100%'}} src={props.frontEndInfo.photo} alt='사진이 없습니다'/>
             </Link>
             <div style={{display:'flex', flexDirection:'row', justifyContent:'space-evenly', marginTop:'1%'}}>
                 <div style={{border:'2px solid'}}>

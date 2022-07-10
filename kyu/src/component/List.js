@@ -14,7 +14,7 @@ const List = () => {
                     {
                         frontEndInfo.map((element)=>(
                             <Link to={`/detail/${element.id}`} key={element.id} style={{textDecoration:'none', color:'black'}}>
-                                {<Blockcopy frontEndInfo={element} i={element.id}/>}
+                                {<Blockcopy frontEndInfo={element} id={element.id}/>}
                             </Link>
                         ))
                     }

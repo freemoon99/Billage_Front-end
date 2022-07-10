@@ -1,10 +1,12 @@
-import React from 'react';
+import { React, useState } from 'react';
 import Header from '../component/Header';
 import { Outlet } from 'react-router-dom';
 import Post from '../component/Post';
-import AddModal from '../modal/AddModal';
+import AlramModal from '../modal/alramModal';
+import AddModal from './../modal/AddModal';
 
 function Main() {
+
     return (
         <>
             <div style={{textAlign:'center', width:'80%' , border:"2px blue solid" , margin:"auto"}}>
@@ -18,7 +20,8 @@ function Main() {
                     <Outlet/>
                     {/* 게시글 컴포넌트 */}
                     <Post />
-                    <AddModal />
+                    <AddModal/>
+                    <AlramModal value={true}/>
                 </div>
             </div>
         </>

@@ -1,26 +1,41 @@
-import { React, useState }from 'react';
+import React,{useState,useEffect} from 'react';
 import Logo from './Logo.js';
+import Slogan from './Slogan.js';
 import '../style/Header.css';
-import { Link } from 'react-router-dom';
+import {getFrontEndInfo} from '../data/FrontEndInfo';
+import { useNavigate,useSearchParams,useLocation } from 'react-router-dom';
 
 const Header = () => {
+    const [searchData, setSearchData] = useState("");
+    const frontEndInfo = getFrontEndInfo();
+    const [searchParams,setSearchParams] = useSearchParams();
+    const search = (searchParams.get("searchData"));
+    const location = useLocation();
+    
+    useEffect(() => {
+        console.log(location);
+      }, [ location ])
 
-    const [ search, setSerach ] = useState("");
-
-    function searchHandle(e) {
-        setSerach(e.target.value);
-    }
+    const navigate = useNavigate();
+    const onChageSearch = (e)=>{
+        e.preventDefault();
+        setSearchData(e.target.value);
+    };
+    const searchClick = (e)=>{
+        e.preventDefault();
+        navigate(`/search/?search=${searchData}`);
+        setSearchData('');
+    };
 
     return (
         <div id="HeaderDiv">
-            <div id="LeftBOx">
-            <Logo margin="0%" width="40%" />
-            </div>
-            <div id="RightBox">
-                <input style={{height: '70%', marginBottom:'auto', marginTop:'auto'}} type="text" placeholder="찾는 물건을 입력하세요" onChange={searchHandle}/>
-                <div><button style={{backgroundColor:'#cdccf7', border:'0', outline:'0'}}><Link to={`/serach`}><img src='/Search.png' alt='이미지 없습니다'></img></Link></button></div>
-                <a href="/login">로그인/회원가입</a>
-            </div>
+            <Logo margin="1%" width="10%" />
+            <Slogan size="60%" />
+            <form onSubmit={searchClick} style={{width:"50%"}}>
+                <input id="searchBar" value={searchData} type="text" onChange={onChageSearch} placeholder="찾는 물건을 입력하세요" />
+                <button type="submit" id="searchBtn" className="btn btn-primary">검색</button>
+            </form>
+            <p id="loginSignup"><a href="/login">로그인/회원가입</a></p>
         </div>
     );
 };
