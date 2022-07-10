@@ -7,9 +7,8 @@ import Mypage from './page/Mypage';
 import Signup from './page/Signup';
 import Footer from './component/Footer';
 import Serach from './page/Serach';
-import Reply from './page/Reply';
+import Createpost from './page/Createpost';
 import './App.css';
-
 
 function App() {
 
@@ -22,7 +21,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/serach" element={<Serach />} />
-        <Route path="/reple" element={<Reply />} />
+        <Route path="/write" element={<Createpost />} />
       </Routes>
       <Footer />
     </>

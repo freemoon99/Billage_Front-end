@@ -5,6 +5,7 @@ import Header from './../component/Header';
 import { useParams } from 'react-router-dom';
 import { getFrontEndPeple } from '../data/FrontEndInfo';
 import Myinfo from '../component/Myinfo';
+import Reply from './../component/Reply';
 
 function Detail() {
     const params = useParams();
@@ -32,7 +33,7 @@ function Detail() {
                         </div>
                     </h4>
                     <div style={{border:'2px solid orange'}}>
-                        <h4>댓글</h4>
+                        <Reply />
                     </div>
                     <Post />
                 </div>

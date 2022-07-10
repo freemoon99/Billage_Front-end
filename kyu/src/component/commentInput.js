@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { MdAdd } from 'react-icons/md';
-import './CommentInput.css';
+import '../style/CommentInput.css';
 
 const CommentInput = ({ onInsert }) => {
     const [value, setValue] = useState({

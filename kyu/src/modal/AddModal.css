@@ -15,11 +15,14 @@
     cursor: pointer;
     padding: 10px 0 10px 0;
     background: rgba(102, 103, 171, 0.4);
+    text-decoration: none;
 }
 
 .modal-text:hover
 {
     background-color:#6667AB;
+    text-decoration: none;
+
 }
 
 body {

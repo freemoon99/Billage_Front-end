@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const styles = {
     root: {
-        width: '40%',
+        width: '100%',
         margin: 'auto',
         padding: 10,
         textAlign: 'left',
@@ -14,6 +14,7 @@ const styles = {
         width: '50'
     },
     image: {
+        backgroundColor: '#cdccf7',
         width: 50,
         height: 50,
         borderRadius: 25,
@@ -22,7 +23,7 @@ const styles = {
         display: 'inline-block',
         marginLeft: 16,
         textAlign: 'left',
-        verticalAlign: 'top'
+        verticalAlign: 'top',   
     },
     nameText: {
         color: 'black',
@@ -44,7 +45,7 @@ class Comment extends Component {
             <div style={styles.root}>
                 <div style={styles.imageContainer}>
                     <img
-                        src='./logo192.png'
+                        src='/HOME_image.png'
                         style={styles.image}
                     />
                 </div>

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useCallback } from 'react';
-import Template from '../component/Template';
-import CommentInput from '../component/commentInput';
-import Comment from '../component/Comment';
+import Template from './Template';
+import CommentInput from './commentInput';
+import Comment from './Comment';
 
 
 function Reply() {
@@ -9,9 +9,6 @@ function Reply() {
   const [comments, setComments] = useState([
     { id: 1, name: 'KIT BILLAGE TEAM', content: 'WELCOME!!', }
   ]);
-
-  const [like, setLike] = useState(0);  //좋아요 버튼구현
-
 
   const nextId = useRef(1);
 
@@ -34,7 +31,7 @@ function Reply() {
   return (
     <div>
       <Template>
-        <h3>댓글을 남겨주세요</h3>
+        <h4 style={{texAlign:'left'}}>댓글을 남겨주세요</h4>
         <CommentInput onInsert={onInsert} />
       </Template>
       <div style={{ marginBottom: "4rem" }}>
