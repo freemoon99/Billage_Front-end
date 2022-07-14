@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import Logo from '../component/Logo';
 import { useNavigate} from 'react-router-dom';
+import axios from 'axios';
 
 const Login = () => {
     const [inputId, setInputId] = useState('');
@@ -14,6 +15,18 @@ const Login = () => {
     };
     const onClickLogin = () => {
         console.log('click login');
+        axios({
+            url:'/url/',
+            method:'post',
+            data:{
+                
+            },
+            headers:{
+                'ContentType':'application/json'
+            }
+        }).then((res)=>{
+            console.log(res);
+        }).catch((e)=>console.log(e))
     };
     const onClickSignUp = () =>{
         navigate('/signup');
@@ -31,7 +44,7 @@ const Login = () => {
                 </div>
                 <div>
                     <p>PW</p>
-                    <input style={{width:'100%'}} type='password' name='input_pw' value={inputPw} onChange={handleInputPw} />
+                    <input type='password' name='input_pw' style={{width:"100%"}} value={inputPw} onChange={handleInputPw} />
                 </div>
                 <div>
                     <button style={{width:"100%",margin:"5% 0"}} type='button' onClick={onClickLogin}>Login</button>

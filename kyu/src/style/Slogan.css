@@ -1,0 +1,11 @@
+@media (min-width: 1000px) {
+  #SloganMent {
+    display: block;
+  }
+}
+
+@media (max-width: 1000px) {
+  #SloganMent {
+    display: none;
+  }
+}

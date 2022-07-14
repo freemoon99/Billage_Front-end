@@ -1,11 +1,14 @@
 import React from 'react';
-import Block from '../component/Block';
+import {useParams} from 'react-router-dom';
+import Blockcopy from './Blockcopy';
 
-const Post = (props) => {
-
+const Upost = (props) => {
+    const params = useParams();
     console.log(typeof props);
     console.log(props);
 
+    const filterData = props.data.filter((element)=>{ if(element.id === parseInt(params.productId)) return element.id});
+    console.log(filterData);
     return (
         <>
             <div className='container' style={{width:'100%', border:'2px solid yellow', textAlign:'center'}}>
@@ -13,15 +16,15 @@ const Post = (props) => {
                 <div className='row'>
                     {
                         // id값을 받아와서 이동하기 위함
-                        props.totalPost.map((element)=>(
-                                <Block totalPost={element} key={element.id} i={element.id}/>
+                        filterData.map((element)=>(
+                                <Blockcopy frontEndInfo={element} key={element.id} i={element.id}/>
                         ))
                     }
                 </div>
             </div>
         </>
-
+        
     );
 };
 
-export default Post;
+export default Upost;

@@ -1,12 +1,21 @@
-import { React, useState } from 'react';
+import React,{useEffect,useState} from 'react';
 import Header from '../component/Header';
 import { Outlet } from 'react-router-dom';
 import Post from '../component/Post';
-import AlramModal from '../modal/alramModal';
-import AddModal from './../modal/AddModal';
+import AddModal from '../modal/AddModal';
+import AlramModal from '../modal/AlramModal';
+import axios from 'axios';
 
 function Main() {
-
+    const [totalPost,setTotalPost] = useState([]);
+    useEffect(()=>{
+        axios.get('/board/')
+        .then(res=>{
+            setTotalPost(res.data);
+        })
+        .catch(e=>console.log(e))
+    },[]);
+    
     return (
         <>
             <div style={{textAlign:'center', width:'80%' , border:"2px blue solid" , margin:"auto"}}>
@@ -17,11 +26,12 @@ function Main() {
                         <img style = {{textAlign:'center', width:'70%'}} src='/Home_image.png' alt='이미지 없습니다'/>
                     </div>
                     {/* 공통 컴포넌트 밑에 출력하기 위해 아울렛 */}
+                    
                     <Outlet/>
                     {/* 게시글 컴포넌트 */}
-                    <Post />
-                    <AddModal/>
-                    <AlramModal value={true}/>
+                    <Post totalPost={totalPost} />
+                    <AddModal />
+                    <AlramModal value={true} />
                 </div>
             </div>
         </>
