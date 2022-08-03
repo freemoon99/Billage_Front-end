@@ -32,7 +32,6 @@ const List = () => {
                     {
                         filterData.map((element)=>(
                             <Link to={`/detail/${element.id}`} key={element.id} style={{textDecoration:'none', color:'black'}}>
-                                
                                 {<Blockcopy product={element} id={element.id}/>}
                             </Link>
                         ))

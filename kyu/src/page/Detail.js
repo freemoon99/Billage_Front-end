@@ -26,6 +26,7 @@ function Detail() {
         getTotalPost();
     },[params.productId])
     console.log(totalPost);
+    
     return (
         <>
             <div style={{textAlign:'center', width:'80%' , border:"2px blue solid" , margin:"auto"}}>
